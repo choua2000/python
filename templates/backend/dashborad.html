@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="/product">Product</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Bar -->
+            <header class="topbar">
+                <div class="user-info">
+                    <p>Welcome, John Doe</p>
+                    <button class="notification-btn">🔔</button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content">
+                <h1>Dashboard Overview</h1>
+                <div class="widgets">
+                    <div class="widget">
+                        <h3>Sales</h3>
+                        <p>$1,234</p>
+                    </div>
+                    <div class="widget">
+                        <h3>Visitors</h3>
+                        <p>4,567</p>
+                    </div>
+                    <div class="widget">
+                        <h3>Messages</h3>
+                        <p>10</p>
+                    </div>
+                    <div class="widget">
+                        <h3>Performance</h3>
+                        <p>85%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #444;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 20px;
+    
+}
+
+.sidebar-menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #555;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Bar */
+.topbar {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.topbar .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.notification-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.notification-btn:hover {
+    background-color: #ccc;
+}
+
+/* Content Area */
+.content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex-grow: 1;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.widgets {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.widget {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 22%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.widget h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.widget p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .widgets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .widget {
+        width: 80%;
+    }
+}
+
+</style>
